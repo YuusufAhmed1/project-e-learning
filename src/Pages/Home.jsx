@@ -1,168 +1,386 @@
 import Header from "../Components/Header";
 import Hero from "../Components/Home/Hero";
+import Middle from "../Components/Home/Middle";
 import Middletwo from "../Components/Home/Middletwo";
 import Middlethre from "../Components/Home/Middlethre";
 import Quetions from "../Components/Quetions";
 import Ogeysiis from "../Components/Ogeysiis";
-import Middle from "../Components/Home/Middle";
 import Foter from "../Components/Home/Foter";
-import Course from"../Data/Course "
-import { LuClock3 } from "react-icons/lu";
-import { HiOutlineDocumentText } from "react-icons/hi2";
-import { FaArrowUpLong } from "react-icons/fa6";
-import { HiArrowUpRight } from "react-icons/hi2";
 
+import CourseCard from "../Components/CourseCard";
+import { courses } from "../Data/courses";
+
+import { Link } from "react-router-dom";
+import { HiArrowUpRight } from "react-icons/hi2";
+import { motion } from "framer-motion";
 
 
 function Home() {
 
-  const yuu = Course[1];
-const yoo = Course.slice(19, 27);
+
+  const popularCourses = courses.slice(0,8);
+
+
   return (
+
     <>
-      <div className="bg-gradient-to-r from-cyan-100 via-white to-pink-200">
-        <Header />
-        <Hero />
-      </div>
-
-      <Middle />
-<div className="max-w-7xl mx-auto my-10 bg-white rounded-[24px] border border-gray-200 shadow-sm overflow-hidden flex flex-col lg:flex-row hover:shadow-xl transition-all duration-300">
 
 
-  <div className="lg:w-1/2 h-[350px]">
-    <img
-      src={yuu.image}
-      alt={yuu.name}
-      className="w-full h-full object-cover rounded-l-[24px]"
-    />
-  </div>
+      {/* HERO */}
+
+      <section className="
+      relative
+      overflow-hidden
+      bg-gradient-to-br
+      from-emerald-50
+      via-white
+      to-cyan-100
+      ">
 
 
-  <div className="lg:w-1/2 px-10 py-7 flex flex-col justify-between">
-
-    <div>
-
-
-      <div className="flex justify-between items-center">
-
-        <span className="bg-gray-100 px-5 py-2 rounded-xl text-base font-semibold">JavaScrit </span>
-        
-
-
-        <div className="bg-[#03261F] text-white px-6 py-2 rounded-full flex items-center gap-2 font-semibold">
-          🔥 Popular
-        </div>
-
-      </div>
+        <div className="
+        absolute
+        w-96
+        h-96
+        bg-emerald-200
+        rounded-full
+        blur-3xl
+        opacity-40
+        top-10
+        -left-20
+        "></div>
 
 
-    
-      <h1 className="text-[36px] font-bold text-[#0B1F1A] mt-6 leading-tight">
-        {yuu.name}
-      </h1>
+        <div className="
+        absolute
+        w-96
+        h-96
+        bg-pink-200
+        rounded-full
+        blur-3xl
+        opacity-40
+        right-0
+        bottom-0
+        "></div>
 
 
-  
-      <p className="text-gray-500 text-base leading-7 mt-4">
-        {yuu.promise}
-      </p>
 
+        <div className="relative z-10">
 
-      <div className="flex justify-between items-center mt-6 text-gray-700">
+          <Header />
 
-        <div className="flex items-center gap-3">
-          <LuClock3 className="text-2xl"/>
-          <span className="text-lg">
-            {yuu.weeks} 
-          </span>
+          <Hero />
+
         </div>
 
 
-        <div className="flex items-center gap-3">
-          <HiOutlineDocumentText className="text-2xl"/>
-          <span className="text-lg">
-            {yuu.lectures} 
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <hr className="my-6 border-gray-200"/>
 
 
-      <div className="flex justify-between items-center">
 
-        <h2 className="text-[42px] font-bold text-emerald-500">
-          {yuu.price}
-        </h2>
+      {/* INTRO */}
+
+      <section className="py-16">
+
+        <Middle />
+
+      </section>
 
 
-        <button className="border-2 border-black rounded-full h-14 w-52 flex items-center justify-between pl-6 pr-2 hover:bg-black hover:text-white duration-300">
 
-          <span className="text-lg font-semibold">
-            View Details
-          </span>
 
-          <div className="w-10 h-10 bg-[#03261F] rounded-full flex items-center justify-center text-white">
-            <FaArrowUpLong className="rotate-45 text-sm"/>
+
+
+
+      {/* COURSES */}
+
+      <section className="
+      bg-gray-50
+      py-20
+      ">
+
+
+        <div className="
+        max-w-7xl
+        mx-auto
+        px-6
+        ">
+
+
+          <motion.div
+
+          initial={{
+            opacity:0,
+            y:40
+          }}
+
+          whileInView={{
+            opacity:1,
+            y:0
+          }}
+
+          transition={{
+            duration:.6
+          }}
+
+          className="
+          flex
+          flex-col
+          md:flex-row
+          justify-between
+          items-start
+          md:items-center
+          mb-12
+          ">
+
+
+            <div>
+
+
+              <span className="
+              text-emerald-600
+              font-semibold
+              ">
+                OUR COURSES
+              </span>
+
+
+              <h2 className="
+              text-4xl
+              md:text-5xl
+              font-bold
+              mt-3
+              text-[#0B1F1A]
+              ">
+
+                Explore Popular Courses
+
+              </h2>
+
+
+              <p className="
+              text-gray-500
+              mt-4
+              max-w-xl
+              leading-7
+              ">
+
+                Learn from experienced instructors and gain
+                practical skills that help you build your career.
+
+              </p>
+
+
+            </div>
+
+
+
+
+
+            <Link to="/courses">
+
+
+              <button className="
+              mt-6
+              md:mt-0
+              group
+              flex
+              items-center
+              gap-4
+              rounded-full
+              border
+              border-black
+              px-7
+              py-3
+              hover:bg-black
+              hover:text-white
+              transition
+              ">
+
+
+                View All Courses
+
+
+                <span className="
+                w-11
+                h-11
+                rounded-full
+                bg-black
+                text-white
+                flex
+                items-center
+                justify-center
+                group-hover:bg-white
+                group-hover:text-black
+                transition
+                ">
+
+
+                  <HiArrowUpRight
+
+                  className="
+                  text-xl
+                  group-hover:rotate-45
+                  transition
+                  "
+
+                  />
+
+
+                </span>
+
+
+              </button>
+
+
+            </Link>
+
+
+
+          </motion.div>
+
+
+
+
+
+
+
+
+          <div className="
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-4
+          gap-8
+          ">
+
+
+          {
+            popularCourses.map((course,index)=>(
+
+
+              <motion.div
+
+              key={course.id}
+
+              initial={{
+                opacity:0,
+                y:40
+              }}
+
+              whileInView={{
+                opacity:1,
+                y:0
+              }}
+
+              transition={{
+                delay:index * 0.1
+              }}
+
+              >
+
+                <CourseCard
+                course={course}
+                />
+
+
+              </motion.div>
+
+
+
+            ))
+          }
+
+
           </div>
 
-        </button>
-
-      </div>
 
 
-    </div>
+        </div>
 
-  </div>
 
-</div>
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-  {yoo.map((item) => (
-    <div
-      key={item.id}
-      className="border rounded-xl p-4 shadow-md hover:shadow-lg transition"
-    >
-      <img
-        src={item.image}
-        alt=""
-        className="w-full h-40 object-cover rounded-lg"
-      />
-<div className="flex gap-10 justify-between">
-      <h1 className="font-bold  mt-3">{item.name}</h1>
- <p className="text-2xl font-bold text-green-600 mt-2 ">
-        {item.price}
-      </p>
-      </div>
-      <p className="text-gray-600 mt-2">{item.promise}</p>
+      </section>
 
-      <div className="flex justify-between mt-3 text-sm text-gray-500">
-        <span>⏳ {item.weeks} weeks</span>
-        <span>📚 {item.lectures} lectures</span>
 
-      </div>
 
-     
-    </div>
-    
-  ))}
 
-</div>
-          <button className="group flex items-center gap-4 border border-black rounded-full pl-8 pr-2 py-2 hover:bg-black hover:text-white duration-300 items-center ml-120 mt-10">
-    View All Courses
-    <div className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center duration-300 group-hover:bg-white">
-      <HiArrowUpRight className="text-2xl duration-500 group-hover:text-black group-hover:rotate-45" />
-    </div>
-  </button>
 
-      <Middletwo />
-      <Ogeysiis />
-      <Quetions />
+
+
+      {/* FEATURE NOTICE */}
+
+      <section className="
+      py-20
+      ">
+
+        <Ogeysiis />
+
+      </section>
+
+
+
+
+
+
+
+      {/* SECOND SECTION */}
+
+
+      <section className="
+      bg-white
+      py-20
+      ">
+
+        <Middletwo />
+
+      </section>
+
+
+
+
+
+
+
+
+      {/* FAQ */}
+
+      <section className="
+      bg-gray-50
+      py-20
+      ">
+
+        <Quetions />
+
+      </section>
+
+
+
+
+
+
+
+      {/* THIRD SECTION */}
+
       <Middlethre />
+
+
+
+
+
+
+
+      {/* FOOTER */}
+
       <Foter />
+
+
     </>
+
   );
+
 }
+
 
 export default Home;
