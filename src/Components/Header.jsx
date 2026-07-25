@@ -2,13 +2,17 @@ import { Link } from "react-router-dom";
 import { HiMiniHome } from "react-icons/hi2";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { useState, useEffect } from "react";
-import { useCart } from "../context/CartContext";
+import { useSelector } from "react-redux";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { getCartCount } = useCart();
+  const cartItems = useSelector(
+  (state) => state.cart.cartItem
+);
+
+const cartCount = cartItems.length;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,9 +63,9 @@ function Header() {
             className="relative p-2 text-dark-text hover:text-primary transition-colors"
           >
             <FaShoppingCart size={24} />
-            {getCartCount() > 0 && (
+            {cartCount > 0 && (
               <span className="absolute top-0 right-0 w-5 h-5 bg-accent text-white text-xs flex items-center justify-center rounded-full font-bold">
-                {getCartCount()}
+                {cartCount}
               </span>
             )}
           </Link>
