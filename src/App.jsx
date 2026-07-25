@@ -10,20 +10,29 @@ import CourseDetails from "./Pages/CourseDetails";
 import Header from "./Components/Header";
 import Footer from "./Components/Home/Foter";
 import Mentors from "./Pages/Mentors";
+import MentorProfile from "./Pages/MentorProfile";
 function App() {
   return (
     <div>
-
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/blogs" element={<Blogs />} />
-      <Route path="/courses" element={<Courses Course ={Course} header={<Header />} footer={<Footer />} />} />
-      <Route path="/CourseDetails/:slug" element={<CourseDetails />}/>
-      <Route path="/mentors" element={<Mentors header={<Header />} footer={<Footer />} />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route
+          path="/courses"
+          element={
+            <Courses Course={Course} header={<Header />} footer={<Footer />} />
+          }
+        />
+        <Route path="/CourseDetails/:slug" element={<CourseDetails />} />
+        <Route
+          path="/mentors"
+          element={<Mentors header={<Header />} footer={<Footer />} />}
+        />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/mentors/:slug" element={<MentorProfile />} />
+      </Routes>
     </div>
   );
 }
