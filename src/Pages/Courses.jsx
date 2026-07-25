@@ -23,9 +23,25 @@ function Courses({ Course }) {
         <Header />
       </div>
 
-      <div className="text-6xl bg-gradient-to-r from-cyan-100 via-white to-pink-200 font-bold p-40">
-        <h1>We Offer an Outstanding Learning Experience</h1>
-      </div>
+         <div className="flex justify-between items-center">
+  <div>
+    <h1 className="text-6xl font-bold pl-6 pt-10">
+We Offer an Outstanding
+    </h1>
+    <h1 className="text-6xl font-bold pl-6">
+ Learning Experience
+
+    </h1>
+  </div>
+<div className="grid grid-cols-6 gap-2 pr-12">
+  {Array.from({ length: 18 }).map((_, index) => (
+    <div
+      key={index}
+      className="w-2 h-2 bg-gray-400 rounded-full"
+    ></div>
+  ))}
+</div>
+</div>
 
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl border overflow-hidden flex flex-col lg:flex-row">
