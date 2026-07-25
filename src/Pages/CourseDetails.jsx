@@ -2,12 +2,13 @@ import  { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaStar, FaUserFriends, FaClock, FaGlobe, FaCertificate, FaPlayCircle, FaCheck, FaFolder, FaTasks, FaTrophy } from 'react-icons/fa';
 import { courses } from '../data/courses';
-import { useCart } from '../context/CartContext';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/Reducer";
 import CourseCard from '../Components/CourseCard';
 
 const CourseDetails = () => {
   const { slug } = useParams();
-  const { addToCart } = useCart();
+  const dispatch = useDispatch();
   
   const course = courses.find(c => c.slug === slug);
   
@@ -85,7 +86,7 @@ const CourseDetails = () => {
                   {course.discountPrice && <span className="text-lg text-gray-400 line-through ml-2 font-normal">${course.price}</span>}
                 </div>
                 <button 
-                  onClick={() => addToCart(course)}
+                onClick={() => dispatch(addToCart(course))}
                   className="w-full py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-bold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all mb-4"
                 >
                   Add to Cart

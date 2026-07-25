@@ -1,16 +1,17 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { FaStar, FaUserFriends, FaClock, FaShoppingCart } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { useCart } from '../context/CartContext';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../Redux/Reducer";
 
 const CourseCard = ({ course }) => {
   const navigate = useNavigate();
-  const { addToCart } = useCart();
+  const dispatch = useDispatch();
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    addToCart(course);
+    dispatch(addToCart(course));
   };
 
   return (
