@@ -5,7 +5,7 @@ import CourseCard from "../Components/CourseCard";
 import { courses } from "../data/courses";
 import { categories } from "../data/categories";
 
-const Courses = ({ header }) => {
+const Courses = ({ header, footer }) => {
   const [filteredCourses, setFilteredCourses] = useState(courses);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -370,6 +370,7 @@ const Courses = ({ header }) => {
           </div>
         </div>
       </div>
+      {footer}
     </div>
   );
 };

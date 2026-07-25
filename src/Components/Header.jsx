@@ -48,7 +48,7 @@ function Header() {
           <Link to="/courses">Courses</Link>
         </li>
         <li>
-          <Link to="/teachers">Teachers</Link>
+          <Link to="/mentors">Mentors</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>
