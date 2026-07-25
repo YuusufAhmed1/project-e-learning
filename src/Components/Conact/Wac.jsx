@@ -6,18 +6,7 @@ function Wac() {
 
       <div className="max-w-7xl mx-auto">
 
-        {/* Title */}
-        <div className="text-center mb-14">
-
-          <h1 className="text-5xl font-bold text-slate-900">
-            Contact Us
-          </h1>
-
-          <p className="text-gray-600 mt-4 text-lg">
-            Have a question? We would love to hear from you.
-          </p>
-
-        </div>
+        
 
 
 
@@ -164,7 +153,6 @@ function Wac() {
 
 
 
-            {/* Social Icons */}
             <div className="flex gap-5 mt-10">
 
 
@@ -210,7 +198,6 @@ function Wac() {
 
 
 
-        {/* Map */}
         <div className="mt-12 rounded-3xl overflow-hidden shadow-lg">
 
           <iframe

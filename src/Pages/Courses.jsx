@@ -21,14 +21,15 @@ function Courses({ Course }) {
     <>
       <div className="bg-gradient-to-r from-cyan-100 via-white to-pink-200">
         <Header />
-      </div>
+      
+     
 
          <div className="flex justify-between items-center">
   <div>
-    <h1 className="text-6xl font-bold pl-6 pt-10">
+    <h1 className="text-6xl font-bold pl-15 pt-20">
 We Offer an Outstanding
     </h1>
-    <h1 className="text-6xl font-bold pl-6">
+    <h1 className="text-6xl font-bold pl-15">
  Learning Experience
 
     </h1>
@@ -39,7 +40,10 @@ We Offer an Outstanding
       key={index}
       className="w-2 h-2 bg-gray-400 rounded-full"
     ></div>
+    
+  
   ))}
+   </div>
 </div>
 </div>
 
