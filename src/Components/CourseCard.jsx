@@ -1,6 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { FaStar, FaUserFriends, FaClock, FaShoppingCart } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/Reducer";
 
@@ -8,15 +7,12 @@ const CourseCard = ({ course }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleAddToCart = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleAddToCart = () => {
     dispatch(addToCart(course));
   };
 
   return (
-    <motion.div 
-      whileHover={{ y: -10 }}
+    <div 
       className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 group flex flex-col h-full"
     >
       <div className="relative h-48 overflow-hidden">
@@ -107,7 +103,7 @@ const CourseCard = ({ course }) => {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
