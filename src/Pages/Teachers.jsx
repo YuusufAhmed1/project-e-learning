@@ -1,6 +1,11 @@
+import Header from "../Components/Header"
+import Hero from "../Components/Teachers/Hero"
 function Teachers(){
     return<>
-    <h1>Teachers</h1>
+       <div className="bg-gradient-to-r from-cyan-100 via-white to-pink-200">
+        <Header />
+        <Hero />
+      </div>
     </>
 }
 

@@ -104,11 +104,13 @@ const Courses = ({ header }) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
+
     <div>
       {header}
       <div className="bg-light-gray min-h-screen py-12">
         <div className="container mx-auto px-4 md:px-8">
           <div className="bg-white p-6 rounded-2xl shadow-sm mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+
             <div>
               <h1 className="text-3xl font-bold text-dark-text">
                 Explore Courses

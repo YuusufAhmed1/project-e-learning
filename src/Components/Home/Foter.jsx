@@ -18,22 +18,28 @@ function Foter() {
             <div className="flex gap-4">
 
               <a
-                href="#"
-                className="w-14 h-14 rounded-full border flex items-center justify-center text-2xl hover:bg-blue-600 hover:text-white hover:scale-110 duration-300 shadow-md"
+                href="https://www.facebook.com/profile.php?id=61592181006653"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full border flex items-center justify-center text-2xl hover:bg-blue-600 hover:text-white hover:scale-110 duration-300 shadow-md cursor-pointer"
               >
                 <FaFacebookF />
               </a>
 
               <a
-                href="#"
-                className="w-14 h-14 rounded-full border flex items-center justify-center text-2xl hover:bg-black hover:text-white hover:scale-110 duration-300 shadow-md"
+                href="https://www.tiktok.com/@yuusof21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full border flex items-center justify-center text-2xl hover:bg-black hover:text-white hover:scale-110 duration-300 shadow-md cursor-pointer"
               >
                 <FaTiktok />
               </a>
 
               <a
-                href="#"
-                className="w-14 h-14 rounded-full border flex items-center justify-center text-2xl hover:bg-green-500 hover:text-white hover:scale-110 duration-300 shadow-md"
+                href="https://wa.me/252619371500?text=Asc%20waxaan%20ka%20helay%20website-kaaga"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full border flex items-center justify-center text-2xl hover:bg-green-500 hover:text-white hover:scale-110 duration-300 shadow-md cursor-pointer"
               >
                 <FaWhatsapp />
               </a>
@@ -41,49 +47,103 @@ function Foter() {
             </div>
           </div>
 
+
           <div className="pl-20">
             <h2 className="text-3xl font-bold mb-6">About Us</h2>
+
             <ul className="space-y-4 text-lg">
-              <li className="hover:text-green-600 duration-300 cursor-pointer">Home</li>
-              <li className="hover:text-green-600 duration-300 cursor-pointer">About</li>
-              <li className="hover:text-green-600 duration-300 cursor-pointer">Courses</li>
-              <li className="hover:text-green-600 duration-300 cursor-pointer">Contact</li>
+              <li className="hover:text-green-600 duration-300 cursor-pointer">
+                Home
+              </li>
+
+              <li className="hover:text-green-600 duration-300 cursor-pointer">
+                About
+              </li>
+
+              <li className="hover:text-green-600 duration-300 cursor-pointer">
+                Courses
+              </li>
+
+              <li className="hover:text-green-600 duration-300 cursor-pointer">
+                Contact
+              </li>
             </ul>
           </div>
+
 
           <div>
             <h2 className="text-3xl font-bold mb-6">Others</h2>
+
             <ul className="space-y-4 text-lg">
-              <li className="hover:text-green-600 duration-300 cursor-pointer">Mentors</li>
-              <li className="hover:text-green-600 duration-300 cursor-pointer">Blog</li>
-            
+              <li className="hover:text-green-600 duration-300 cursor-pointer">
+                Mentors
+              </li>
+
+              <li className="hover:text-green-600 duration-300 cursor-pointer">
+                Blog
+              </li>
             </ul>
           </div>
 
-          <div className="">
+
+          <div>
             <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-            <div className="space-y-5 text-lg text-gray-700 ">
-<a href="tel:+252619371500"className="block hover:text-green-500 hover:underline cursor-pointer">📞 +252 619371500</a>
-<a href="tel:+252614668477"className="block hover:text-green-500 hover:underline cursor-pointer">📞 +252 614668477</a>
-<a href="email:yuuzufcadde@gmail.com"className="block hover:text-green-500 hover:underline cursor-pointer">📧 yuuzufcadde@gmail.com</a>
-<a href="email:xeydarabdi@gmail.com"className="block hover:text-green-500 hover:underline cursor-pointer">📧 xeydarabdi@gmail.com</a>
-<p className="hover:text-green-500 hover:underline cursor-pointer">📍 Mogadishu, Somalia</p>
+
+            <div className="space-y-5 text-lg text-gray-700">
+
+              <a
+                href="tel:+252619371500"
+                className="block hover:text-green-500 hover:underline cursor-pointer"
+              >
+                📞 +252 619371500
+              </a>
+
+              <a
+                href="tel:+252614668477"
+                className="block hover:text-green-500 hover:underline cursor-pointer"
+              >
+                📞 +252 614668477
+              </a>
+
+              <a
+                href="mailto:yuuzufcadde@gmail.com"
+                className="block hover:text-green-500 hover:underline cursor-pointer"
+              >
+                📧 yuuzufcadde@gmail.com
+              </a>
+
+              <a
+                href="mailto:xeydarabdi@gmail.com"
+                className="block hover:text-green-500 hover:underline cursor-pointer"
+              >
+                📧 xeydarabdi@gmail.com
+              </a>
+
+              <p className="hover:text-green-500 hover:underline cursor-pointer">
+                📍 Mogadishu, Somalia
+              </p>
+
             </div>
           </div>
+
         </div>
 
+
         <div className="border-t mt-16 pt-6 flex flex-col md:flex-row justify-between items-center">
+
           <p className="text-gray-600">
             © 2026 All Rights Reserved.
           </p>
 
           <p className="text-gray-600 mt-3 md:mt-0">
-            Designed By Yuusuf
+            Designed By Yuusuf and Abdikani
           </p>
+
         </div>
+
       </footer>
     </>
   );
 }
 
-export default Foter
+export default Foter;
