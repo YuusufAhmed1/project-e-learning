@@ -1,32 +1,17 @@
 import { Link } from "react-router-dom";
 import { HiMiniHome } from "react-icons/hi2";
-import { HiArrowUpRight } from "react-icons/hi2";
-import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
+import { FaShoppingCart} from "react-icons/fa";
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const cartItems = useSelector(
   (state) => state.cart.cartItem
 );
 
 const cartCount = cartItems.length;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+
 
   return (
     <header className="w-full h-20 px-10 flex items-center justify-between bg-transparent">
@@ -45,9 +30,7 @@ const cartCount = cartItems.length;
         <li>
           <Link to="/about">About</Link>
         </li>
-        <li>
-          <Link to="/blogs">Blogs</Link>
-        </li>
+
         <li>
           <Link to="/courses">Courses</Link>
         </li>
@@ -77,10 +60,7 @@ const cartCount = cartItems.length;
             Get Started
           </Link>
 
-          {/* Mobile Menu Toggle */}
-          <button className="md:hidden text-dark-text p-2" onClick={toggleMenu}>
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
+
         </div>
         
       </ul>

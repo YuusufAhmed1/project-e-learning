@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { FaSearch, FaFilter, FaTimes } from "react-icons/fa";
 import CourseCard from "../Components/CourseCard";
 import { courses } from "../data/courses";
 import { categories } from "../data/categories";
 
-const Courses = ({ header, footer }) => {
+const Courses = ({ header, footer}) => {
   const [filteredCourses, setFilteredCourses] = useState(courses);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -18,7 +17,7 @@ const Courses = ({ header, footer }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const coursesPerPage = 9;
 
-  // Filter Logic
+  
   useEffect(() => {
     let result = courses;
 

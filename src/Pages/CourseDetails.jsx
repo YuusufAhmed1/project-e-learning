@@ -1,6 +1,6 @@
 import  { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FaStar, FaUserFriends, FaClock, FaGlobe, FaCertificate, FaPlayCircle, FaCheck, FaFolder, FaTasks, FaTrophy } from 'react-icons/fa';
+import { FaStar, FaUserFriends,  FaGlobe, FaPlayCircle, FaCheck, FaFolder, FaTasks, FaTrophy } from 'react-icons/fa';
 import { courses } from '../data/courses';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/Reducer";
